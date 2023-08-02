@@ -2,10 +2,10 @@ console.log('Hello from Nerdbord!')
 
 const box = document.querySelector(".box");
 const colors = ['red','blue','green','yellow'];
+let i = 0;
 
-colors.forEach((color, i) => {
-    setInterval(function (){
-        box.style.borderColor = color;
-    },3000);
-})
+setInterval(function (){
+    box.style.borderColor = colors[i];
+    i = (i + 1) % colors.length;
+},3000);
 
